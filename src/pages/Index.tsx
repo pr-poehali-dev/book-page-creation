@@ -61,7 +61,14 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-[#FEF7E8] text-[#2C1810]">
       <div 
-        className="fixed inset-0 opacity-[0.03] pointer-events-none"
+        className="fixed inset-0 opacity-30 pointer-events-none bg-cover bg-center"
+        style={{
+          backgroundImage: `url("https://cdn.poehali.dev/projects/db78d273-f046-42cb-8cb5-d34602e631a7/files/942a42fe-b74e-4943-b762-f4c2147921ba.jpg")`,
+          backgroundBlendMode: 'multiply'
+        }}
+      />
+      <div 
+        className="fixed inset-0 opacity-[0.02] pointer-events-none"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E")`
         }}
