@@ -82,12 +82,12 @@ export default function Index() {
                 <div className="inline-block px-4 py-2 border-2 border-[#C9A961] text-[#C9A961] text-sm tracking-widest">
                   НОВИНКА СЕЗОНА
                 </div>
-                <h1 className="text-7xl font-serif leading-tight">
+                <h1 className="text-7xl font-serif leading-tight font-semibold">
                   Тайна<br/>
                   <span className="text-[#C9A961]">Старого</span><br/>
                   Особняка
                 </h1>
-                <p className="text-xl text-[#2C1810]/70 italic">
+                <p className="text-xl text-[#2C1810]/70 italic font-serif">
                   Мистический детектив о древних секретах и забытых артефактах
                 </p>
               </div>
@@ -138,7 +138,7 @@ export default function Index() {
                     </div>
                     <div>
                       <div className="text-[#C9A961] text-sm tracking-widest mb-2">АЛЕКСАНДР ВОРОНЦОВ</div>
-                      <h2 className="text-5xl font-serif text-[#FEF7E8] leading-tight">
+                      <h2 className="text-5xl font-serif text-[#FEF7E8] leading-tight font-semibold">
                         Тайна<br/>Старого<br/>Особняка
                       </h2>
                     </div>
@@ -164,8 +164,8 @@ export default function Index() {
               <Icon name="BookMarked" size={32} className="text-[#C9A961]" />
               <div className="h-px w-20 bg-[#C9A961]" />
             </div>
-            <h2 className="text-5xl font-serif">Содержание</h2>
-            <p className="text-[#2C1810]/70 text-lg max-w-2xl mx-auto">
+            <h2 className="text-5xl font-serif font-semibold">Содержание</h2>
+            <p className="text-[#2C1810]/70 text-lg max-w-2xl mx-auto italic">
               Путешествие в мир тайн и загадок
             </p>
           </div>
@@ -186,10 +186,10 @@ export default function Index() {
                       {chapter.number}
                     </div>
                     <div className="flex-1 space-y-2">
-                      <h3 className="text-2xl font-serif group-hover:text-[#C9A961] transition-colors">
+                      <h3 className="text-2xl font-serif group-hover:text-[#C9A961] transition-colors font-semibold">
                         {chapter.title}
                       </h3>
-                      <p className="text-[#2C1810]/70 leading-relaxed">
+                      <p className="text-[#2C1810]/70 leading-relaxed text-lg">
                         {chapter.preview}
                       </p>
                     </div>
@@ -208,7 +208,7 @@ export default function Index() {
               <Icon name="BookOpen" size={32} className="text-[#C9A961]" />
               <div className="h-px w-20 bg-[#C9A961]" />
             </div>
-            <h2 className="text-5xl font-serif">Читать онлайн</h2>
+            <h2 className="text-5xl font-serif font-semibold">Читать онлайн</h2>
             <p className="text-[#2C1810]/70 text-lg">
               Первые три главы доступны бесплатно
             </p>
@@ -234,11 +234,11 @@ export default function Index() {
                     <div className="space-y-8">
                       <div className="text-center space-y-2">
                         <div className="text-sm text-[#C9A961] tracking-widest">ГЛАВА {chapter.number}</div>
-                        <h3 className="text-4xl font-serif">{chapter.title}</h3>
+                        <h3 className="text-4xl font-serif font-semibold">{chapter.title}</h3>
                       </div>
                       
                       <div className="prose prose-lg max-w-none">
-                        <div className="text-[#2C1810] leading-relaxed text-justify space-y-4 text-lg">
+                        <div className="text-[#2C1810] leading-relaxed text-justify space-y-4 text-lg font-sans">
                           {chapter.fullText.split('\n\n').map((paragraph, i) => (
                             <p key={i} className="first-letter:text-6xl first-letter:font-serif first-letter:text-[#C9A961] first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-1">
                               {paragraph}
@@ -307,8 +307,8 @@ export default function Index() {
                 <CardContent className="p-12 space-y-6">
                   <div>
                     <div className="text-sm text-[#C9A961] tracking-widest mb-2">ОБ АВТОРЕ</div>
-                    <h2 className="text-4xl font-serif mb-4">Михаил Александров</h2>
-                    <div className="text-[#2C1810]/70 space-y-4 leading-relaxed">
+                    <h2 className="text-4xl font-serif mb-4 font-semibold">Михаил Александров</h2>
+                    <div className="text-[#2C1810]/70 space-y-4 leading-relaxed text-lg font-sans">
                       <p>
                         Историк по образованию, писатель по призванию. Более 15 лет изучает архивы старинных усадеб и особняков России, собирая истории и легенды.
                       </p>
@@ -343,7 +343,7 @@ export default function Index() {
               <Icon name="MessageSquare" size={32} className="text-[#C9A961]" />
               <div className="h-px w-20 bg-[#C9A961]" />
             </div>
-            <h2 className="text-5xl font-serif">Отзывы читателей</h2>
+            <h2 className="text-5xl font-serif font-semibold">Отзывы читателей</h2>
             <div className="flex items-center justify-center gap-2">
               {[1,2,3,4,5].map(i => (
                 <Icon key={i} name="Star" size={24} className="fill-[#C9A961] text-[#C9A961]" />
@@ -361,7 +361,7 @@ export default function Index() {
                       <Icon key={i} name="Star" size={20} className="fill-[#C9A961] text-[#C9A961]" />
                     ))}
                   </div>
-                  <p className="text-[#2C1810]/80 leading-relaxed italic">
+                  <p className="text-[#2C1810]/80 leading-relaxed italic text-lg font-sans">
                     "{review.text}"
                   </p>
                   <div className="pt-4 border-t border-[#C9A961]/20">
@@ -384,7 +384,7 @@ export default function Index() {
                 <div className="text-center space-y-8">
                   <div>
                     <Icon name="Sparkles" size={48} className="mx-auto mb-4 text-[#C9A961]" />
-                    <h2 className="text-5xl font-serif mb-4">Приобрести книгу</h2>
+                    <h2 className="text-5xl font-serif mb-4 font-semibold">Приобрести книгу</h2>
                     <p className="text-[#FEF7E8]/80 text-lg max-w-2xl mx-auto">
                       Выберите удобный формат и начните читать прямо сейчас
                     </p>
